@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="html-5-icon.png" type="image/x-icon">
+    <title>Parágrafos</title>
+    <style>
+        /*
+          aqui serve para anotações no CSS
+                Dá para anotar codigos hexadecimal de cores, para criar variáveis por exemplo.
+                mais podemos criar variáveis com (:root)
+        */
+        :root{
+            --cor01:#000000; /* posso iniciar com dois traços o nome da variavel e por o elemento//quando eu for usar a variavel digito no valor (var(aqui o que eu declarei na variavel))*/
+ 
+            --cor02: #ff0000; 
+        }
+           
+
+        #emcss{
+            text-align: center;
+            text-indent: 20px; 
+        }
+
+        .titulo{
+            text-align: right;
+            background-color: beige;
+            padding: 10px;
+            height: 20px;
+            border-radius: 10px;
+
+        }
+
+        div{
+            display: inline-block;
+            background-color: #000000;
+            color: aquamarine;
+            border: 3px solid red;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+
+        }
+        div:hover{
+            background-color: var(--cor02);
+            color: aquamarine;
+            border: 3px solid var(--cor01);
+            transition: 1s linear;
+            text-shadow: 10px 10px rgba(0, 0, 0, 0.404);
+            border-radius: 50%;
+            text-align: center;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Parágrafos e quebra de linha</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur<!--esse é o jeito semantico e certo de por negrito, italico--> <strong><em>adipisicing</em> elit.</strong>  Placeat inventore dolores reiciendis ea cupiditate Lorem<!-- esse é o jeito errado de por negrito, italico--> <b>ipsum dolor <i>sit </i> amet </b> consectetur adipisicing elit. Ab minima suscipit tempore nisi vero,<!--se quiser por texto marcado no html, se eu quiser mudar cor da maecação, posso usar um (<mark style="")--> <mark style="background-color: rgb(179, 92, 92);" >enim eos pariatur</mark> rem recusandae molestiae soluta, est ea! Sapiente sunt repellat perferendis nulla illo voluptates. <br><!-- se eu quiser quebrar de linha eu uso <br>--> temporibus, esse saepe error adipisci debitis ex a aliquam modi nostrum perspiciatis illum velit! Magni, repellendus!</p>
+
+
+    <h2>Adicionando simbolos especiais</h2>
+        &reg;
+        &copy;
+        <p>Adicionar emojis</p>
+    <!-- Posso entrar no emojipedia.org e pegar o código antecipado por '&#x'-->
+
+    <h1>Imagens</h1>
+    <!-- formatos de imagens são basicamente .png(compactado e transparência) ou .jpeg((alta compactação )) -->
+    Usar imagens com 1500 de largura é o ideal.
+
+        <p>colocaar imagens no site</p>
+        <img src="2DD297B4_9BA0_4828_A4A2_149A8A73AF52.png" alt="" width="200px">
+        <p>Dá pra adicionar icones de favoritos</p>
+    <!--Pesquisar no iconachive.com////icones de 100x100, geralmente uma logo, e em formato .ico --> <br>
+    <p class="titulo"> só digtar no head LINK:FAVICON em cima do TITLE</p>
+    <!-- caminho= head>title>link:favicon>href(clica ctrl e space)-->
+    <hr><h5>A parti daqui é CSS</h5>
+    <h1 id="emcss">Alinhar textos</h1>
+    <h2 class="titulo"> Colocar class nas tag</h2><!-- não se deve por id's repetidas nas tags, e ao invés disso, devo por class com um nome da função que eu queira estilizar-->
+
+    <h1>Pseudo-classes</h1><!-- está ligado ao estado( usa a tag, dois pontos e o comando.), se está vazio, ligado, e etc.-->
+        <div id="01">01</div><!--aplicar pseudo elementos(usa a tag e 2 pontos 2 vezes e o comando)-->
+        <div id="02">02</div>
+        <div id="03">03</div>
+
+</body>
+</html>
